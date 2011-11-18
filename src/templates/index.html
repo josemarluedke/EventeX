@@ -3,19 +3,34 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>EventeX</title>
+	<link href="{{ STATIC_URL }}stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<div id="logo"<h1>EventeX</h1></div>
-	
-	<section class="content">
-		<div id="content">
-			Bem-vindo!!
-		</div>
+	<div id="top"><h1>EventeX</h1></div>
+	<header	id="menu">
+		<ul>
+			<li style="margin-left: 0px;"><a href="/">Home</a></li>
+			<li><a href="#inscricoes">Inscrições</a></li>
+			<li><a href="#contato">Contato</a></li>
+		</ul>
+		<div class="clear"></div>
+	</header>
+	<section id="content">
+		<div class="title">Bem-vindo ao EventeX!</div>
+		<p>
+			O evento mais esperado do ano!
+		</p>
+		<p>
+			Você não pode perder esta oportunidade.
+		</p>
+			Abertura das inscrições em 20/11/2011.
+		<p>
+			Para dúvidas e mais informações entre em contato com <a href="mailto:eventex@eventex.com.br">eventex@eventex.com.br</a>
+		</p>
 	</section>
 	<footer>
-		<p style="padding-top: 5px; text-align: center; color: #333">
-			<a href="http://josemarluedke.com">Josemar Davi Luedke</a>
-		</p>
+		2011 &copy; EventeX - <a href="http://josemarluedke.com">By Josemar Luedke</a>
+		<a style="float: right" href="http://www.djangoproject.com"><img src="{{ STATIC_URL }}images/django.gif" /></a>
 	</footer>
 </body>
 </html>

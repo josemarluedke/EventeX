@@ -1,0 +1,29 @@
+body 			{color:#FFFFFF; font:14px Arial, Helvetica, sans-serif; background:#222222 url(../images/bg.png) repeat-x; margin:auto; padding:0px; width: 985px;}
+
+section,
+header,
+footer 			{display: block;}
+img				{border: none;}
+.clear			{clear: both;}
+a				{color: #D0D0D0; text-decoration: none;}
+a:hover			{color: #444444;}
+.title			{font-size:21px; color:#3399CC; text-shadow: 0 1px 2px #444; font-family:'DroidSansRegular',"Trebuchet MS",Trebuchet,Verdana,sans-serif; margin-bottom:10px}
+
+
+div#top			{background: transparent url(../images/top.png) center no-repeat; width: 985px; height: 145px; margin-top:50px;}
+div#top h1		{visibility: hidden;}
+
+header#menu		{margin-top: 100px; font-size: 13px;}
+header#menu ul	{margin: 11px; padding: 0px; margin-left:0}
+header#menu ul li{color: #FFFFFF; display:block; float:left; list-style:none; margin:0 7px; background: #1B1B1B; padding:5px 12px; -moz-border-radius:4px 4px 4px 4px; border-radius:4px 4px 4px 4px; border-bottom: 1px solid #2B2B2B; border-right: 1px solid #2B2B2B; }
+header#menu ul li a {color: #F0F0F0; text-decoration: none; display: block;}
+header#menu ul li:hover{background: #0B0B0B}
+
+section			{margin-top: 30px; color: #777777; font-size: 15px;}
+
+
+footer			{margin-top: 13px; padding-top: 5px; text-align: center; font-size: 13px; margin-bottom: 5px; border-top: 1px solid #333;}
+
+input, textarea, select		{padding-top:3px; border:1px solid #777; background:#333; font-size:11px; width: 90%; color: #FFFFFF; -moz-border-radius:4px 4px 4px 4px; border-radius:4px 4px 4px 4px; }
+.submit			{width: 80px;}
+textarea		{height: 125px;}
