@@ -24,7 +24,7 @@ section			{margin-top: 30px; color: #777777; font-size: 15px;}
 
 footer			{margin-top: 13px; padding-top: 5px; text-align: center; font-size: 13px; margin-bottom: 5px; border-top: 1px solid #333;}
 
-label						{width: 50px; display: block; float: left; clear: both; text-align: right; padding-right: 5px;}
+label						{width: 60px; display: block; float: left; clear: both; text-align: right; padding-right: 5px;}
 input, textarea, select		{padding-top:3px; border:1px solid #777; background:#333; font-size:11px; width: 200px; color: #FFFFFF; -moz-border-radius:4px 4px 4px 4px; border-radius:4px 4px 4px 4px; }
 input[type=submit]			{width: 80px;}
 textarea					{height: 125px;}
