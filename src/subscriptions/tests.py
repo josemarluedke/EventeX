@@ -21,8 +21,9 @@ class SubscriptionModelTest(TestCase):
         self.assertNotEqual(Subscription.DoesNotExist, Subscription.objects.get(name="Josemar Davi Luedke"))
 
     def test_delete_subscription(self):
+        oldPk = self.subscription.pk
         self.subscription.delete()
-        self.assertRaises(Subscription.DoesNotExist, Subscription.objects.get, pk=self.subscription.pk)
+        self.assertRaises(Subscription.DoesNotExist, Subscription.objects.get, pk=oldPk)
 
 
 
