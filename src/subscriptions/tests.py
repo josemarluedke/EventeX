@@ -7,9 +7,9 @@ class SubscriptionModelTest(TestCase):
     def setUp(self):
         self.subscription = Subscription.objects.create(
             name="Josemar Luedke",
-            cpf="1234567890",
+            cpf="12345678901",
             email="josemarluedke@gmail.com",
-            phone="(51) 0000-0000"
+            phone="51-00000000"
         )
     
     def test_insert_subscription(self):
@@ -31,18 +31,18 @@ class SubscriptionFormTest(TestCase):
     def test_insert_subscription_form(self):
         form = SubscriptionForm({
             'name': 'Josemar Davi Luedke',
-            'cpf': '1234567890',
+            'cpf': '12345678901',
             'email': 'josemarluedke@mail.com',
-            'phone': '(51) 0000-0000'
+            'phone': '51-00000000'
         })
         self.assertTrue(form.is_valid())
 
     def test_insert_subscription_with_empty_name(self):
         form = SubscriptionForm({
             'name': '',
-            'cpf': '1234567890',
+            'cpf': '12345678901',
             'email': 'josemarluedke@mail.com',
-            'phone': '(51) 0000-0000'
+            'phone': '51-00000000'
         })
         self.assertFalse(form.is_valid())
 
@@ -51,32 +51,32 @@ class SubscriptionFormTest(TestCase):
             'name': 'Josemar Davi Luedke',
             'cpf': '',
             'email': 'josemarluedke@mail.com',
-            'phone': '(51) 0000-0000'
+            'phone': '51-00000000'
         })
         self.assertFalse(form.is_valid())
 
     def test_insert_subscription_with_empty_email(self):
         form = SubscriptionForm({
             'name': 'Josemar Davi Luedke',
-            'cpf': '1234567890',
+            'cpf': '12345678901',
             'email': '',
-            'phone': '(51) 0000-0000'
+            'phone': '51-00000000'
         })
         self.assertFalse(form.is_valid())
 
     def test_insert_subscription_with_invalid_email(self):
         form = SubscriptionForm({
             'name': 'Josemar Davi Luedke',
-            'cpf': '1234567890',
+            'cpf': '12345678901',
             'email': 'fulano.castro.mail.com',
-            'phone': '(51) 0000-0000'
+            'phone': '51-00000000'
         })
         self.assertFalse(form.is_valid())
 
     def test_insert_subscription_with_empty_phone(self):
         form = SubscriptionForm({
             'name': 'Josemar Davi Luedke',
-            'cpf': '1234567890',
+            'cpf': '12345678901',
             'email': 'josemarluedke@mail.com',
             'phone': ''
         })
@@ -94,9 +94,9 @@ class SubscriptionsUrlsTest(TestCase):
     def test_url_success(self):
         self.subscription = Subscription.objects.create(
             name="Josemar Luedke",
-            cpf="1234567890",
+            cpf="12345678901",
             email="josemarluedke@gmail.com",
-            phone="(51) 0000-0000"
+            phone="51-00000000"
         )
         
         response = self.client.get(reverse('subscriptions:success', args=[self.subscription.pk]))
