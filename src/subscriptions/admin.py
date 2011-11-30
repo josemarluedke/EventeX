@@ -3,7 +3,7 @@ import datetime
 from django.contrib import admin
 from subscriptions.models import Subscription
 from django.utils.translation import ugettext as _
-from django.utils.translation import ugettext
+from django.utils.translation import ungettext
 from django.conf.urls.defaults import patterns, url
 from django.http import HttpResponse
 
@@ -13,13 +13,14 @@ class SubscriptionAdmin(admin.ModelAdmin):
     search_fields = ('name', 'cpf', 'email', 'phone', 'created_at')
     list_filter = ('paid',)
 
-    action = ['mark_as_paid']
+    actions = ['mark_as_paid']
 
     def mark_as_paid(self, request, queryset):
         count = queryset.update(paid=True)
-        msg = ugettext(
+        msg = ungettext(
             u"%(count)d inscrição foi marcada como paga.",
             u"%(count) inscrições foram marcadas como pagas.",
+            count
         ) %  {'count': count}
         self.message_user(request, msg)
     mark_as_paid.short_description = _(u"Marcar como pagas")
