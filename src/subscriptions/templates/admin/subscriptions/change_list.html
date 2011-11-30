@@ -1,0 +1,11 @@
+{% extends 'admin/change_list.html' %}
+  {% block object-tools %}
+    <ul class="object-tools" style="margin-right: 150px;">
+	    <li>
+		    <a href="{% url admin:export_subscriptions %}" class="addlink">
+		        Exportar Inscrições
+		    </a>
+	    </li>
+	</ul>
+  {{ block.super }}
+{% endblock object-tools %}
